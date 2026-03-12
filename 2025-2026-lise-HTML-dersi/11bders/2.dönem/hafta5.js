@@ -102,3 +102,9 @@ setInterval(function(){
     document.getElementById("saat").innerHTML=zaman.toLocaleTimeString();
 
 },1000);
+
+
+
+$("#renk2").click(function(){
+$("body").css("background-color","lightblue");
+});
