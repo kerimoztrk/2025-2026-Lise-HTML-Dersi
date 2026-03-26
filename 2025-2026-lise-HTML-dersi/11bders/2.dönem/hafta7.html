@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tekrar</title>
+</head>
+<body>
+    
+<!-- <h2>Javascript tekrar başlangıcı</h2>
+
+<button onclick="mesaj()">Tıkla</button> -->
+
+ 
+<!-- <button onclick="goster()">Bilgileri Göster </button>
+<br>
+<p id="sonuc"></p>
+
+
+
+<button onclick="hesapla()">Hesapla</button>
+<br>
+<p id="hesapSonucu"></p>
+
+
+<button onclick="temizle()">Temizle</button>
+<p id="temizle"></p> -->
+<!-- 
+<button onclick="kontrol()">Kontrol Et</button>
+
+<p id="kontrolSonuc"></p> -->
+<!-- <button onclick="notDurum()">Not hesapla</button>
+
+<p id="notSonuc"></p> -->
+
+<!-- <button onclick="yaz()">Yazdır</button>
+
+<p id="forSonuc"></p> 
+
+<button onclick="yaz2()">Yazdır2</button>
+
+<p id="whileSonuc"></p>  -->
+
+<p id="settimeoutYazi">Bekleniyorr...!</p>
+
+<p id="sayi">0</p>
+
+<script>
+
+    function mesaj(){
+        alert("Javascript Çalışıyor");
+    }
+
+    function goster(){
+
+        let ad="Ahmet";
+        const soyad="Yılmaz";
+        var yas=30;
+        let AktiflikDurumu=true;
+
+        document.getElementById("sonuc").innerHTML="Ad: "+ad+"<br>"+"Soyad: "+soyad+"<br>"+"Yaş: "+yas+"<br>"+"Aktiflik Durumu: "+AktiflikDurumu;
+
+}
+
+
+function hesapla(){
+
+    let a= 10;
+    let b=43;
+
+let toplam=a+b;
+let bolum=a/b;
+let carpim=a*b;
+
+document.getElementById("hesapSonucu").innerHTML="Toplam: "+toplam+"<br>"+"Bölüm: "+bolum+"<br>"+"Çarpım: "+carpim;
+
+}
+
+function temizle(){
+    document.getElementById("sonuc").innerHTML="";
+    document.getElementById("hesapSonucu").innerHTML="";
+}
+
+
+function kontrol(){
+
+    let yas=1;
+
+    if(yas>=18){
+        sonuc="Giriş Serbest";
+
+    }
+    else{
+        sonuc="Giriş Yasak";
+    }
+
+    document.getElementById("kontrolSonuc").innerHTML=sonuc
+}
+
+
+
+function notDurum(){
+
+    let not=85;
+    let durum;
+
+    if(not>=85){
+        durum="Pekiyi";
+    }
+    else if(not>=70){
+        durum="İyi";
+    }
+    else if(not>=50){
+        durum="Orta";
+    }
+    else{
+        durum="Kaldınız";
+    }
+
+    document.getElementById("notSonuc").innerHTML=durum;
+}
+
+function yaz(){
+
+    let sonuc="";
+
+    for(let i=1; i<=10; i++){
+        sonuc+=i+" ";
+    }
+
+    document.getElementById("forSonuc").innerHTML=sonuc;
+}
+
+function yaz2(){
+
+    let sonuc="";
+    let i=1;
+
+    while(i<=10){
+        sonuc+=i+" ";
+        i++;
+    }
+
+    document.getElementById("whileSonuc").innerHTML=sonuc;
+}
+
+
+setTimeout(function(){
+    document.getElementById("settimeoutYazi").innerHTML="Süre doldu!";
+    
+}, 3000);
+
+
+let sayi=0;
+setInterval(function(){
+    sayi++;
+    document.getElementById("sayi").innerHTML=sayi;
+}, 1000);
+</script>
+
+
+
+
+
+</body>
+</html>
